@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/estilos2.css">
+        <title>Pokedex</title>
+        <script
+            src= "funciones.js"
+            language= "javascript"
+            type= "text/javascript"
+        ></script>     
+        
+    </head>
+    <body onload="procesar()">
+        <header>
+            <h1 id="tituloPD">POKEDEX</h1>
+            <form>
+                <fieldset>
+                    <label for="maximo"></label><br>
+                    <input type="number" placeholder="Indica el número de pokemons a buscar(Máximo 898)" id="numero">
+                    <input type="button" onclick="procesar()" value="Buscar">
+                </fieldset>
+            </form>
+        </header>
+        <main>
+            <div class="pokedex" id="pokedex"></div>
+            <div id="miModal" class="modal"><div class="modal-contenido"><p id="salir"><a href="#">X</a></p><div id="interiorModal"><div id="imagen"></div><p id="info"></p></div></div></div>      
+            <!--<div id="miModal" class="modal"><div class="modal-contenido"><a href="#" onclick="obtenerPokemon()">X</a><p id="info"></p></div></div> -->        
+        </main>
+        <footer>
+            <p>Andrés Gallardo Simón</p>
+            <p>Módulo de lenguaje de Marcas - Año 202021</p>
+        </footer>
+    </body>
+    <script>procesar();</script> 
+    <!--<script>obtenerPokemon();</script>-->
+</html>

@@ -1,0 +1,208 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+footer, header{
+    background-color: black;  
+}
+
+
+header{
+    width:100%;
+    height:150px;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+input{
+    height: 30px;
+}
+main{
+    background-image: url("../images/fondo.jpg");
+    background-repeat:repeat;
+    background-size: auto;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height: 100%;
+}
+
+h1{
+    width: 50%;
+}
+
+form{
+    width: 50%;
+    border: none;
+    color:#3A9D3D;
+    height: 150px;
+}
+
+fieldset{
+    height: 150px;
+    border:none;
+    flex-direction: column;
+    display:flex;    
+    
+}
+
+p,h1{
+    color:#3A9D3D;
+    padding-top:40px;
+    margin-bottom: 40px;
+}
+
+footer{
+    width:100%;
+    height:180px;    
+    text-align: center;    
+}
+
+.pokedex{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 850px;
+    margin-right: 25%;
+    margin-left: 25%;   
+    text-align: center;
+    font-size: large;
+    text-decoration: underline;
+    background-color: #E6E6E6; 
+}
+
+
+
+.pokemon{
+    width: 200px;
+    height: 300px; 
+    background-color: #E6E6E6;   
+    /**border: 2px solid black;*/
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.poke{
+    width: 200px;
+    height: 300px; 
+    background-color: #E6E6E6;   
+    /**border: 2px solid black;*/
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    transition: width 0.5s, height 0.5s, box-shadow 0.5s;
+    
+    
+}
+
+.poke:hover{
+    width: 400px;
+    height: 450px;  
+    right:-100px;
+    bottom:-70px;
+    box-shadow: 10px 10px 10px black;    
+    z-index:1000;
+   
+}
+
+img{
+    transition: width 0.5s, height 0.5s;
+
+}
+
+.poke:hover>img{
+    width:350px;
+    height: 350px;        
+}
+
+p{
+   text-transform:uppercase;
+   text-decoration: underline;
+   font-size: large;
+   font-weight: bold;
+}
+
+.modal-contenido{
+    background-color:#3E963F;
+    width:600px;
+    padding: 5px;
+    margin: 20% auto;
+    position: relative;
+  }
+  .modal{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    z-index:1000000;
+  }
+  #miModal:target{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  #info{
+      color:white;
+      text-decoration: none;
+      text-transform: lowercase;
+  }
+
+  #interiorModal{
+      display: flex;
+      flex-direction: row;
+      align-items: center;      
+  }
+
+  #salir{
+      text-align: right;
+      margin:0px;
+      padding:0px;
+  }
+
+  #imagen{
+    width:170px;
+    height: 170px; 
+    border-radius: 50% 50% 50% 50%;
+    background-color: #E6E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  #titulo{
+      text-align: center;
+      margin:0px;
+      padding:0px;
+      color:white;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-weight: 200;
+  }
+
+  span{
+      background-color: #FDA603;
+      border-radius: 5px 5px 5px 5px;
+      height: 20px;
+      padding: 5px 10px;
+      margin: 10px;
+      text-align: center;
+      line-height: 35px;
+      text-transform: initial;
+  }
+
+  #tituloPD{
+      font-size:4em;
+      margin-left: 20px;
+  }
