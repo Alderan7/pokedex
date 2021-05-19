@@ -56,15 +56,15 @@ function crearGaleria(numero){
         pagina="https://assets.pokemon.com/assets/cms2/img/pokedex/full/"
         for (let index = 1; index <=numero; index++) {
             if (index<=9){
-                document.getElementById( "pokedex" ).innerHTML += "<div class=\"pokemon\"><a class=\"poke\" onclick=\"obtenerNombreImagen(" + index +")\" href=\"#miModal\"><img src=" + pagina + "00" + index + ".png" + " width=200px height=200px><p id=\""+index+"\"></p></a></div>";
+                document.getElementById( "pokedex" ).innerHTML += "<div class=\"pokemon\"><a class=\"poke\" onclick=\"obtenerNombreImagen(" + index +")\" href=\"#miModal\"><img loading=\"lazy\" src=" + pagina + "00" + index + ".png" + " width=200px height=200px><p id=\""+index+"\"></p></a></div>";
                 obtenerNombre(index);
             }
             else if ((index>9) && (index<=99)){
-                document.getElementById( "pokedex" ).innerHTML += "<div class=\"pokemon\"><a class=\"poke\" onclick=\"obtenerNombreImagen("+ index +")\" href=\"#miModal\"><img src=" + pagina + "0" + index + ".png" + " width=200px height=200px><p id=\""+index+"\"></p></a></div>";
+                document.getElementById( "pokedex" ).innerHTML += "<div class=\"pokemon\"><a class=\"poke\" onclick=\"obtenerNombreImagen("+ index +")\" href=\"#miModal\"><img loading=\"lazy\" src=" + pagina + "0" + index + ".png" + " width=200px height=200px><p id=\""+index+"\"></p></a></div>";
                 obtenerNombre(index);
             } 
             else if (index>=100){
-                document.getElementById( "pokedex" ).innerHTML += "<div class=\"pokemon\"><a class=\"poke\"  onclick=\"obtenerNombreImagen("+ index +")\" href=\"#miModal\"><img src=" + pagina + index + ".png" + " width=200px height=200px><p id=\""+index+"\"></p></a></div>"; 
+                document.getElementById( "pokedex" ).innerHTML += "<div class=\"pokemon\"><a class=\"poke\"  onclick=\"obtenerNombreImagen("+ index +")\" href=\"#miModal\"><img loading=\"lazy\" src=" + pagina + index + ".png" + " width=200px height=200px><p id=\""+index+"\"></p></a></div>"; 
                 obtenerNombre(index);
             } 
         }     
@@ -116,11 +116,11 @@ function obtenerNombreImagen(numero){
         var miObj = JSON .parse( this .responseText);
         //Recorremos el array de habilidades
         if (numero<=9){
-            document .getElementById( "imagen" ).innerHTML+="<img src=" + pagina + "00" + numero + ".png" + " width=150px height=150px>";
+            document .getElementById( "imagen" ).innerHTML+="<img loading=\"lazy\" src=" + pagina + "00" + numero + ".png" + " width=150px height=150px>";
         }else if ((numero>9) && (numero<=99)){
-            document .getElementById( "imagen" ).innerHTML+="<img src=" + pagina + "0" + numero + ".png" + " width=150px height=150px>"; 
+            document .getElementById( "imagen" ).innerHTML+="<img loading=\"lazy\" src=" + pagina + "0" + numero + ".png" + " width=150px height=150px>"; 
         }else if (numero>=100){    
-            document .getElementById( "imagen" ).innerHTML+="<img src=" + pagina + numero + ".png" + " width=150px height=150px>"; 
+            document .getElementById( "imagen" ).innerHTML+="<img loading=\"lazy\" src=" + pagina + numero + ".png" + " width=150px height=150px>"; 
         }
         document .getElementById( "info" ).innerHTML+="<h2 id=\"titulo\">" + miObj.forms[0].name + "</h2></br>"   
         document .getElementById( "info" ).innerHTML+="<span>Habilidades:</span>"
